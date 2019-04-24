@@ -7,7 +7,7 @@ import pygame
 class Home(pygame.sprite.Sprite):
 	def __init__(self):
 		pygame.sprite.Sprite.__init__(self)
-		self.homes = ['./images/home/home1.png', './images/home/home2.png', './images/home/home_destroyed.png']
+		self.homes = ['TankBattle/images/home/home1.png', 'TankBattle/images/home/home2.png', 'TankBattle/images/home/home_destroyed.png']
 		self.home = pygame.image.load(self.homes[0])
 		self.rect = self.home.get_rect()
 		self.rect.left, self.rect.top = (3 + 12 * 24, 3 + 24 * 24)

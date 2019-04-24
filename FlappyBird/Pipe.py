@@ -7,7 +7,7 @@ import random
 class pipeHead(pygame.sprite.Sprite):
 	def __init__(self):
 		pygame.sprite.Sprite.__init__(self)
-		self.pipe_head = pygame.image.load("./resources/images/pipe_head.png")
+		self.pipe_head = pygame.image.load("FlappyBird/resources/images/pipe_head.png")
 		self.img = self.pipe_head
 		self.rect = self.pipe_head.get_rect()
 		self.height = self.pipe_head.get_height()
@@ -18,7 +18,7 @@ class pipeHead(pygame.sprite.Sprite):
 class pipeBody(pygame.sprite.Sprite):
 	def __init__(self):
 		pygame.sprite.Sprite.__init__(self)
-		self.pipe_body = pygame.image.load("./resources/images/pipe_body.png")
+		self.pipe_body = pygame.image.load("FlappyBird/resources/images/pipe_body.png")
 		self.img = self.pipe_body
 		self.rect = self.pipe_body.get_rect()
 		self.height = self.pipe_body.get_height()

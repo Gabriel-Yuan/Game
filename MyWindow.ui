@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>幼圆</family>
+    <pointsize>18</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="TankBattle">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>120</y>
+      <width>400</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>坦克大战</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="EatBeans">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>240</y>
+      <width>400</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>吃豆豆</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Sokoban">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>180</y>
+      <width>400</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>推箱子</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="FlappyBird">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>300</y>
+      <width>400</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>FlappyBird</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>50</y>
+      <width>241</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PyGame小游戏合集</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>36</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -8,7 +8,7 @@ import random
 class Brick(pygame.sprite.Sprite):
 	def __init__(self):
 		pygame.sprite.Sprite.__init__(self)
-		self.brick = pygame.image.load('./images/scene/brick.png')
+		self.brick = pygame.image.load('TankBattle/images/scene/brick.png')
 		self.rect = self.brick.get_rect()
 		self.being = False
 
@@ -17,7 +17,7 @@ class Brick(pygame.sprite.Sprite):
 class Iron(pygame.sprite.Sprite):
 	def __init__(self):
 		pygame.sprite.Sprite.__init__(self)
-		self.iron = pygame.image.load('./images/scene/iron.png')
+		self.iron = pygame.image.load('TankBattle/images/scene/iron.png')
 		self.rect = self.iron.get_rect()
 		self.being = False
 
@@ -26,7 +26,7 @@ class Iron(pygame.sprite.Sprite):
 class Ice(pygame.sprite.Sprite):
 	def __init__(self):
 		pygame.sprite.Sprite.__init__(self)
-		self.ice = pygame.image.load('./images/scene/ice.png')
+		self.ice = pygame.image.load('TankBattle/images/scene/ice.png')
 		self.rect = self.ice.get_rect()
 		self.being = False
 
@@ -37,7 +37,7 @@ class River(pygame.sprite.Sprite):
 		pygame.sprite.Sprite.__init__(self)
 		if kind is None:
 			self.kind = random.randint(0, 1)
-		self.rivers = ['./images/scene/river1.png', './images/scene/river2.png']
+		self.rivers = ['TankBattle/images/scene/river1.png', 'TankBattle/images/scene/river2.png']
 		self.river = pygame.image.load(self.rivers[self.kind])
 		self.rect = self.river.get_rect()
 		self.being = False
@@ -47,7 +47,7 @@ class River(pygame.sprite.Sprite):
 class Tree(pygame.sprite.Sprite):
 	def __init__(self):
 		pygame.sprite.Sprite.__init__(self)
-		self.tree = pygame.image.load('./images/scene/tree.png')
+		self.tree = pygame.image.load('TankBattle/images/scene/tree.png')
 		self.rect = self.tree.get_rect()
 		self.being = False
 

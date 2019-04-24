@@ -2,12 +2,7 @@
 # 游戏运行主程序
 import sys
 import pygame
-import TankBattle.scene
-import TankBattle.bullet
-import TankBattle.food
-import TankBattle.tanks
-import TankBattle.home
-from pygame.locals import *
+
 
 
 # 开始界面显示
@@ -15,8 +10,8 @@ from TankBattle import scene, tanks, home, food
 
 
 def show_start_interface(screen, width, height):
-	tfont = pygame.font.Font('./font/simkai.ttf', width//4)
-	cfont = pygame.font.Font('./font/simkai.ttf', width//20)
+	tfont = pygame.font.Font('TankBattle/font/simkai.ttf', width//4)
+	cfont = pygame.font.Font('TankBattle/font/simkai.ttf', width//20)
 	title = tfont.render(u'坦克大战', True, (255, 0, 0))
 	content1 = cfont.render(u'按1键进入单人游戏', True, (0, 0, 255))
 	content2 = cfont.render(u'按2键进入双人人游戏', True, (0, 0, 255))
@@ -43,16 +38,16 @@ def show_start_interface(screen, width, height):
 
 # 结束界面显示
 def show_end_interface(screen, width, height, is_win):
-	bg_img = pygame.image.load("./images/others/background.png")
+	bg_img = pygame.image.load("TankBattle/images/others/background.png")
 	screen.blit(bg_img, (0, 0))
 	if is_win:
-		font = pygame.font.Font('./font/simkai.ttf', width//10)
+		font = pygame.font.Font('TankBattle/font/simkai.ttf', width//10)
 		content = font.render(u'恭喜通关！', True, (255, 0, 0))
 		rect = content.get_rect()
 		rect.midtop = (width/2, height/2)
 		screen.blit(content, rect)
 	else:
-		fail_img = pygame.image.load("./images/others/gameover.png")
+		fail_img = pygame.image.load("TankBattle/images/others/gameover.png")
 		rect = fail_img.get_rect()
 		rect.midtop = (width/2, height/2)
 		screen.blit(fail_img, rect)
@@ -65,9 +60,9 @@ def show_end_interface(screen, width, height, is_win):
 
 # 关卡切换
 def show_switch_stage(screen, width, height, stage):
-	bg_img = pygame.image.load("./images/others/background.png")
+	bg_img = pygame.image.load("TankBattle/images/others/background.png")
 	screen.blit(bg_img, (0, 0))
-	font = pygame.font.Font('./font/simkai.ttf', width//10)
+	font = pygame.font.Font('TankBattle/font/simkai.ttf', width//10)
 	content = font.render(u'第%d关' % stage, True, (0, 255, 0))
 	rect = content.get_rect()
 	rect.midtop = (width/2, height/2)
@@ -91,21 +86,21 @@ def main():
 	screen = pygame.display.set_mode((630, 630))
 	pygame.display.set_caption("坦克大战")
 	# 加载图片
-	bg_img = pygame.image.load("./images/others/background.png")
+	bg_img = pygame.image.load("TankBattle/images/others/background.png")
 	# 加载音效
-	add_sound = pygame.mixer.Sound("./audios/add.wav")
+	add_sound = pygame.mixer.Sound("TankBattle/audios/add.wav")
 	add_sound.set_volume(1)
-	bang_sound = pygame.mixer.Sound("./audios/bang.wav")
+	bang_sound = pygame.mixer.Sound("TankBattle/audios/bang.wav")
 	bang_sound.set_volume(1)
-	blast_sound = pygame.mixer.Sound("./audios/blast.wav")
+	blast_sound = pygame.mixer.Sound("TankBattle/audios/blast.wav")
 	blast_sound.set_volume(1)
-	fire_sound = pygame.mixer.Sound("./audios/fire.wav")
+	fire_sound = pygame.mixer.Sound("TankBattle/audios/fire.wav")
 	fire_sound.set_volume(1)
-	Gunfire_sound = pygame.mixer.Sound("./audios/Gunfire.wav")
+	Gunfire_sound = pygame.mixer.Sound("TankBattle/audios/Gunfire.wav")
 	Gunfire_sound.set_volume(1)
-	hit_sound = pygame.mixer.Sound("./audios/hit.wav")
+	hit_sound = pygame.mixer.Sound("TankBattle/audios/hit.wav")
 	hit_sound.set_volume(1)
-	start_sound = pygame.mixer.Sound("./audios/start.wav")
+	start_sound = pygame.mixer.Sound("TankBattle/audios/start.wav")
 	start_sound.set_volume(1)
 	# 开始界面
 	num_player = show_start_interface(screen, 630, 630)
@@ -175,7 +170,7 @@ def main():
 		# 大本营
 		myhome = home.Home()
 		# 出场特效
-		appearance_img = pygame.image.load("./images/others/appear.png").convert_alpha()
+		appearance_img = pygame.image.load("TankBattle/images/others/appear.png").convert_alpha()
 		appearances = []
 		appearances.append(appearance_img.subsurface((0, 0), (48, 48)))
 		appearances.append(appearance_img.subsurface((48, 0), (48, 48)))
@@ -529,5 +524,5 @@ def main():
 		show_end_interface(screen, 630, 630, False)
 
 
-if __name__ == '__main__':
-	main()
+# if __name__ == '__main__':
+# 	main()

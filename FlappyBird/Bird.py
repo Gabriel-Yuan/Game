@@ -7,9 +7,9 @@ class Bird(pygame.sprite.Sprite):
 	def __init__(self, HEIGHT, WIDTH):
 		pygame.sprite.Sprite.__init__(self)
 		# 基准
-		self.ori_bird = pygame.image.load("./resources/images/bird.png")
+		self.ori_bird = pygame.image.load("FlappyBird/resources/images/bird.png")
 		# 显示用
-		self.rotated_bird = pygame.image.load("./resources/images/bird.png")
+		self.rotated_bird = pygame.image.load("FlappyBird/resources/images/bird.png")
 		self.rect = self.rotated_bird.get_rect()
 		# 游戏界面宽高
 		self.HEIGHT = HEIGHT

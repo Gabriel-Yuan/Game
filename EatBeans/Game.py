@@ -1,7 +1,6 @@
 import os
 import sys
 import pygame
-import EatBeans.Levels
 from EatBeans import Levels
 
 '''定义一些必要的参数'''
@@ -13,14 +12,14 @@ RED = (255, 0, 0)
 YELLOW = (255, 255, 0)
 PURPLE = (255, 0, 255)
 SKYBLUE = (0, 191, 255)
-BGMPATH = os.path.join(os.getcwd(), 'resources/sounds/bg.mp3')
-ICONPATH = os.path.join(os.getcwd(), 'resources/images/icon.png')
-FONTPATH = os.path.join(os.getcwd(), 'resources/font/ALGER.TTF')
-HEROPATH = os.path.join(os.getcwd(), 'resources/images/pacman.png')
-BlinkyPATH = os.path.join(os.getcwd(), 'resources/images/Blinky.png')
-ClydePATH = os.path.join(os.getcwd(), 'resources/images/Clyde.png')
-InkyPATH = os.path.join(os.getcwd(), 'resources/images/Inky.png')
-PinkyPATH = os.path.join(os.getcwd(), 'resources/images/Pinky.png')
+BGMPATH = os.path.join(os.getcwd(), 'EatBeans/resources/sounds/bg.mp3')
+ICONPATH = os.path.join(os.getcwd(), 'EatBeans/resources/images/icon.png')
+FONTPATH = os.path.join(os.getcwd(), 'EatBeans/resources/font/ALGER.TTF')
+HEROPATH = os.path.join(os.getcwd(), 'EatBeans/resources/images/pacman.png')
+BlinkyPATH = os.path.join(os.getcwd(), 'EatBeans/resources/images/Blinky.png')
+ClydePATH = os.path.join(os.getcwd(), 'EatBeans/resources/images/Clyde.png')
+InkyPATH = os.path.join(os.getcwd(), 'EatBeans/resources/images/Inky.png')
+PinkyPATH = os.path.join(os.getcwd(), 'EatBeans/resources/images/Pinky.png')
 
 
 '''开始某一关游戏'''
@@ -176,5 +175,5 @@ def main(screen):
 				showText(screen, font_big, is_clearance)
 	
 
-if __name__ == '__main__':
-	main(initialize())
+# if __name__ == '__main__':
+# 	main(initialize())

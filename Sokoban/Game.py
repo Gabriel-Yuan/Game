@@ -1,6 +1,4 @@
-import os
 import sys
-import pygame
 from Sokoban.Sprites import *
 from Sokoban.config import Config
 from itertools import chain
@@ -303,5 +301,5 @@ def main():
 	endInterface(screen)
 
 
-if __name__ == '__main__':
-	main()
+# if __name__ == '__main__':
+# 	main()

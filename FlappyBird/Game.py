@@ -1,8 +1,6 @@
 # python制作小游戏系列-FlappyBird
-import FlappyBird.Bird
-import FlappyBird.Pipe
 import pygame
-from pygame.locals import *
+
 
 
 # 定义一些常量
@@ -18,16 +16,16 @@ def main():
 	screen = pygame.display.set_mode((WIDTH, HEIGHT), 0, 32)
 	pygame.display.set_caption('FlappyBird')
 	# 载入图片
-	background_img = pygame.image.load("./resources/images/background.png")
-	gameover_img = pygame.image.load("./resources/images/gameover.png")
+	background_img = pygame.image.load("FlappyBird/resources/images/background.png")
+	gameover_img = pygame.image.load("FlappyBird/resources/images/gameover.png")
 	# 载入音乐
-	jump_sound = pygame.mixer.Sound("./resources/audios/jump.wav")
+	jump_sound = pygame.mixer.Sound("FlappyBird/resources/audios/jump.wav")
 	jump_sound.set_volume(6)
-	pygame.mixer.music.load('./resources/audios/moonlight.wav')
+	pygame.mixer.music.load('FlappyBird/resources/audios/moonlight.wav')
 	pygame.mixer.music.play(-1, 0.0)
 	pygame.mixer.music.set_volume(12)
 	# 载入字体
-	font = pygame.font.Font("./resources/fonts/simkai.ttf", 24)
+	font = pygame.font.Font("FlappyBird/resources/fonts/simkai.ttf", 24)
 	# 时钟
 	clock = pygame.time.Clock()
 	# 小鸟
@@ -98,5 +96,5 @@ def main():
 				exit(0)
 
 
-if __name__ == "__main__":
-	main()
+# if __name__ == "__main__":
+# 	main()
